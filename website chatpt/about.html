@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Heart N' Soul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Heart N' Soul</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="about-section">
+
+    <div class="about-text">
+        <h1>About Our Music Class</h1>
+        <p>
+            We provide high-quality music training for all age groups. 
+            Our classes include Guitar, Piano, Violin, Tabla, and more.  
+            Learn from experienced musicians and improve your musical skills 
+            in a friendly and supportive environment.
+        </p>
+    </div>
+
+    <!-- ✔ Slideshow INSIDE the section -->
+    <div class="about-slideshow">
+        <img src="./images/WhatsApp Image 2025-11-27 at 6.04.39 AM.jpeg" class="slide active">
+        <img src="./images/WhatsApp Image 2025-11-27 at 6.04.40 AM.jpeg" class="slide">
+    </div>
+
+</section>
+
+<script>
+let slides = document.querySelectorAll(".about-slideshow .slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+
+<footer>
+    © 2025 Heart N' Soul Music School
+</footer>
+
+</body>
+</html>
